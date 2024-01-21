@@ -13,7 +13,7 @@ css = """
     background-color: #475063
 }
 .chat-message .avatar {
-  width: 20%;
+  width: 10%;
 }
 .chat-message .avatar img {
   width: 50px;
@@ -22,9 +22,11 @@ css = """
   object-fit: cover;
 }
 .chat-message .message {
-  width: 80%;
+  width: 90%;
   padding: 0 1rem;
   color: #fff;
+  display: flex;
+  align-items: center;
 }
 """
 
