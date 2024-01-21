@@ -33,7 +33,7 @@ css = """
 bot_template = """
 <div class="chat-message bot">
     <div class="avatar">
-        <img src="https://i.ibb.co/cN0nmSj/Screenshot-2023-05-28-at-02-37-21.png" style="max-height: 78px; max-width: 78px; border-radius: 50%; object-fit: cover;">
+        <img src="https://static.vecteezy.com/system/resources/previews/023/800/550/original/ai-robot-avatar-futuristic-robot-face-constructor-flat-icon-robot-character-face-artificial-intelligence-avatar-eps-file-vector.jpg" style="max-height: 78px; max-width: 78px; border-radius: 50%; object-fit: cover;">
     </div>
     <div class="message">{{MSG}}</div>
 </div>
