@@ -48,7 +48,7 @@ pip install -r requirements.txt
 
 4. **Open the provided URL in your web browser.**
   ```bash
-  streamlit run app.py
+  https://chat-with-multiple-pdf.streamlit.app
   ```
 
 # How to Use
