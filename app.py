@@ -43,6 +43,22 @@ def get_conversation_chain(vectorstore):
     return conversation_chain
 
 
+def handle_user_input(user_question):
+    response = st.session_state.conversation({"question": user_question})
+    st.session_state.chat_history = response["chat_history"]
+
+    for i, message in enumerate(reversed(st.session_state.chat_history)):
+        if not i % 2 == 0:
+            st.write(
+                user_template.replace("{{MSG}}", message.content),
+                unsafe_allow_html=True,
+            )
+        else:
+            st.write(
+                bot_template.replace("{{MSG}}", message.content), unsafe_allow_html=True
+            )
+
+
 def main():
     load_dotenv()
     st.set_page_config(page_title="Chat with multiple PDFs", page_icon=":books:")
@@ -54,7 +70,9 @@ def main():
         st.session_state.chat_history = None
 
     st.header("Chat with multiple PDFs :books:")
-    st.text_input("Ask a question about your documents:")
+    user_question = st.text_input("Ask a question about your documents:")
+    if user_question:
+        handle_user_input(user_question)
 
     with st.sidebar:
         st.subheader("Your documents")
